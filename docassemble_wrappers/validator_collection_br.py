@@ -1,5 +1,5 @@
 from docassemble.base.util import validation_error
-
+from validator_collection_br import validators_br
 
 def validate_cpf(value):
     # ao executar a entrevista o docassemble executa as validações
