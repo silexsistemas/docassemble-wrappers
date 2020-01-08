@@ -1,6 +1,7 @@
 from docassemble.base.util import validation_error
 from validator_collection_br import validators_br
 
+
 def validate_cpf(value):
     # ao executar a entrevista o docassemble executa as validações
     # antes do usuario preencher o campo,
@@ -12,8 +13,7 @@ def validate_cpf(value):
     try:
         value = validators_br.cpf(value)
     except Exception as e:
-        msg = validation_error(str(e))
-        validation_error(msg)
+        validation_error(str(e))
     return True
 
 
@@ -28,7 +28,6 @@ def validate_cnpj(value):
     try:
         value = validators_br.cnpj(value)
     except Exception as e:
-        msg = validation_error(str(e))
-        validation_error(msg)
+        validation_error(str(e))
 
     return True
