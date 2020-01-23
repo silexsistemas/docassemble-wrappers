@@ -1,6 +1,7 @@
 from docassemble.base.util import validation_error
 from validator_collection_br import validators_br
 
+
 def validate_cpf(value):
     # Docassemble only performs validation if the field is filled
     if not value:
