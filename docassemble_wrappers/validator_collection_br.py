@@ -25,3 +25,16 @@ def validate_cnpj(value):
         validation_error(str(e))
 
     return True
+
+
+def validate_person_full_name(value):
+    # Docassemble only performs validation if the field is filled
+    if not value:
+        return True
+
+    try:
+        value = validators_br.person_full_name(value)
+    except Exception as e:
+        validation_error(str(e))
+
+    return True
